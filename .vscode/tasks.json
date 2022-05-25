@@ -35,6 +35,25 @@
       "problemMatcher": "$msCompile"
     },
     {
+      "label": "publish win-x64",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "publish",
+        "${workspaceFolder}/src/Devil/Devil.csproj",
+        "/p:Configuration=Release",
+        "/p:PublishDir=${workspaceFolder}/publish/win-x64",
+        "/p:RuntimeIdentifier=win-x64",
+        "/p:PublishSingleFile=true",
+        "/p:PublishTrimmed=true",
+        "/p:GenerateFullPaths=true",
+        "/p:IncludeNativeLibrariesForSelfExtract=true",
+        "/p:AssemblyName=devil",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
       "label": "watch",
       "command": "dotnet",
       "type": "process",
